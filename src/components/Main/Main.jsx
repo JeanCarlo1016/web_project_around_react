@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Popup from "../Main/Popup/Popup";
-import AvatarPopup from "../../Form/EditAvatar/EditAvatar";
-import NewCard from "../../Form/NewCard/NewCard";
-import EditProfile from "../../Form/EditProfile/EditProfile";
+import AvatarPopup from "../EditAvatar/EditAvatar";
+import NewCard from "../NewCard/NewCard";
+import EditProfile from "../EditProfile/EditProfile";
 import { initialCards } from "../../utils/utils";
 import Cards from "../Card/Cards";
 import Profile from "../Profile/Profile";
