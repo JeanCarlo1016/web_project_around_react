@@ -6,7 +6,7 @@ import EditProfile from "../../Form/EditProfile/EditProfile";
 import { initialCards } from "../../utils/utils";
 import Cards from "../Card/Cards";
 import Profile from "../Profile/Profile";
-import { useCurrentUser } from "../../context/CurrenUserContext";
+import { useCurrentUser } from "../../contexts/CurrenUserContext";
 import { api } from "../../utils/api";
 
 function Main({ cards, setCards, popup, onOpenPopup, onClosePopup }) {
