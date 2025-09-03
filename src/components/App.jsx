@@ -3,7 +3,7 @@ import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import { api } from "../utils/api";
-import { useCurrentUser } from "../contexts/CurrenUserContext";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 function App() {
   const [popupState, setPopupState] = useState(null);
