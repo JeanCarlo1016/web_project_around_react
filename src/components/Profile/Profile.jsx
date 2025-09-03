@@ -1,6 +1,6 @@
 import ProfilePhoto from "../../assets/personPhoto.png";
 function Profile({
-  profileData,
+  profileInfo,
   onOpenPopup,
   avatarPopup,
   editProfilePopup,
@@ -12,7 +12,7 @@ function Profile({
         <div className="profile__image-container" aria-label="Editar avatar">
           <img
             className="profile__image"
-            src={profileData?.avatar || ProfilePhoto}
+            src={profileInfo?.avatar || ProfilePhoto}
             alt="Imagen de perfil"
           />
           <button
@@ -22,13 +22,13 @@ function Profile({
         </div>
         <div className="profile__content-info">
           <ul>
-            {profileData ? (
+            {profileInfo ? (
               <>
                 <li className="content__info profile__name">
-                  {profileData.name}
+                  {profileInfo.name}
                 </li>
                 <li className="content__info profile__about">
-                  {profileData.about}
+                  {profileInfo.about}
                 </li>
               </>
             ) : (

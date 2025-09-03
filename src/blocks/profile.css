@@ -1,8 +1,9 @@
 .profile {
   height: auto;
   margin: 40px 0px 80px;
-  max-width: 880px;
+  width: 880px;
 }
+
 
 .profile__content {
   display: flex;

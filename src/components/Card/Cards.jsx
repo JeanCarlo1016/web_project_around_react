@@ -1,35 +1,27 @@
 import Card from "./Card";
-import { useState } from "react";
-import { initialCards } from "../../utils/utils";
 
-const Cards = ({ cards, setCards, onOpenPopup, onClosePopup }) => {
-  const handleDeleteCard = (index) => {
-    const updatedCards = cards.filter((_, cardIndex) => cardIndex !== index);
-    setCards(updatedCards);
-  };
-
-  const handleLikeCard = (index) => {
-    const updatedCards = cards.map((card, cardIndex) => {
-      if (cardIndex === index) {
-        return { ...card, isliked: !card.isliked };
-      }
-      return card;
-    });
-    setCards(updatedCards);
-  };
-
+const Cards = ({
+  cards,
+  onLike,
+  onDelete,
+  onOpenPopup,
+  onClosePopup,
+  currentUser,
+}) => {
   return (
     <section className="places" id="cards__zone">
       {cards.map((card, index) => {
+        const isLiked = card.likes?.includes(currentUser._id);
         return (
           <Card
-            key={index}
+            key={card._id}
+            card={card}
             title={card.name}
             imageSrc={card.link}
-            isliked={card.isliked}
+            isliked={isLiked}
             index={index}
-            handleDeleteCard={handleDeleteCard}
-            handleLikeCard={handleLikeCard}
+            onLike={onLike}
+            onDelete={onDelete}
             handleOpenPopup={onOpenPopup}
             handleClose={onClosePopup}
           />

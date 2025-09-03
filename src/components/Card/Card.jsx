@@ -3,12 +3,12 @@ import ImagePopup from "../ImagePopup/ImagePopup";
 import DeleteConfirm from "../../Form/DeleteConfirm/DeleteConfirm";
 
 export default function Card({
+  card,
   title,
   imageSrc,
   isliked,
-  handleLikeCard,
-  handleDeleteCard,
-  index,
+  onLike,
+  onDelete,
   handleOpenPopup,
   handleClose,
 }) {
@@ -21,10 +21,10 @@ export default function Card({
     title: "¿Estás seguro?",
     children: (
       <DeleteConfirm
-        cardId={index}
+        cardId={card._id}
         onCardDelete={() => {
-          handleDeleteCard(index);
-          handleClose(); // 👈 cerrar el popup
+          onDelete(card._id);
+          handleClose();
         }}
       />
     ),
@@ -35,7 +35,7 @@ export default function Card({
     : "places__button_like";
 
   function handleLikeClick() {
-    handleLikeCard(index);
+    onLike(card);
   }
 
   return (
