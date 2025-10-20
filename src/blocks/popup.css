@@ -27,6 +27,23 @@
   text-align: center;
 }
 
+
+.popup__register-image {
+  margin-top: 50px;
+}
+
+.popup__register-caption {
+  font-family: "Inter-Black";
+  margin-top: 32px;
+  max-width: 358px;
+  font-weight: 900;
+  font-size: 24px;
+  color: black;
+  text-wrap-mode: wrap;
+  text-align: center;
+}
+
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
 
